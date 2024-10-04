@@ -1,0 +1,16 @@
+Apenas algumas anotações das tarefas do meu lado aqui (só pra eu me organizar rs)
+
+Feito:
+  - testei para um pdf a ingestão na camada bronze e silver; e funcionou (deixei modularizado com a main.py orquestrando a chamada; a modularização facilita a adição de novas funções, sem a necessidade de mudanças estruturais na arquitetura)
+  - considerei uma função para buscar sempre o path absoluto (é importante pra evitar erro na hora de encontrar arquivos e chamada das funções);
+  - valores manuais estão centralizados em um arquivo config.ini (pra ajudar na manutenção e organização; daí evitamos o hard coded tbm)
+  - requirements.txt e ambiente virtual para gerenciar bibliotecas do python
+
+
+Próximos passos:
+  - replicar/testar a leitura e tratamento para os demais pdf's
+  - implementar função de embedding e gravar na camada gold
+  - adicionar uma coluna de horário de carga nas tabelas para controle/monitoramento da ingestão
+  - avaliar se consigo aplicar outros tratamentos e limpeza nos arquivos para aumentar qualidade do dado ingerido
+  - interessante fazer(quando sobrar tempo): implementar try/except pra avaliação de erro e exceção (interrompendo execução, se necessário); gravar log para acompanhamento e métrica de execução
+  
