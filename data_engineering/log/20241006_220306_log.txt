@@ -1,0 +1,106 @@
+2024-10-06 22:03:06,212 - INFO - Configured the log function. Log file in C:/Users/Micro/Downloads/BCG_X_CHALLENGE/desenv/log/20241006_220306_log.txt
+2024-10-06 22:03:06,213 - INFO - duckdb database does not exists
+2024-10-06 22:03:06,213 - INFO - >>> Starts processing the table plano_nacional ...
+2024-10-06 22:03:06,213 - INFO - >>> Starts ingesting the table plano_nacional in the bronze layer
+2024-10-06 22:03:06,222 - INFO - >>> PDF file read successfully
+2024-10-06 22:03:17,223 - INFO - >>> File content stored in a tuple
+2024-10-06 22:03:17,244 - INFO - >>> Bronze table created
+2024-10-06 22:03:18,340 - INFO - >>> Data inserted into the bronze table (bronze.plano_nacional) successfully
+2024-10-06 22:03:18,352 - INFO - ----------------------------------------------------------------------
+2024-10-06 22:03:18,353 - INFO - >>> Starts ingesting the table plano_nacional in the silver layer
+2024-10-06 22:03:18,363 - INFO - >>> PDF file read successfully
+2024-10-06 22:03:28,267 - INFO - >>> Processed data stored in a tuple
+2024-10-06 22:03:28,289 - INFO - >>> Silver table created
+2024-10-06 22:03:28,752 - INFO - >>> Data inserted into the silver table (silver.plano_nacional) successfully
+2024-10-06 22:03:28,761 - INFO - ----------------------------------------------------------------------
+2024-10-06 22:03:28,763 - INFO - >>> Starts processing the table plano_agro ...
+2024-10-06 22:03:28,764 - INFO - >>> Starts ingesting the table plano_agro in the bronze layer
+2024-10-06 22:03:28,767 - INFO - >>> PDF file read successfully
+2024-10-06 22:03:32,651 - INFO - >>> File content stored in a tuple
+2024-10-06 22:03:32,672 - INFO - >>> Bronze table created
+2024-10-06 22:03:32,859 - INFO - >>> Data inserted into the bronze table (bronze.plano_agro) successfully
+2024-10-06 22:03:32,875 - INFO - ----------------------------------------------------------------------
+2024-10-06 22:03:32,876 - INFO - >>> Starts ingesting the table plano_agro in the silver layer
+2024-10-06 22:03:32,879 - INFO - >>> PDF file read successfully
+2024-10-06 22:03:36,441 - INFO - >>> Processed data stored in a tuple
+2024-10-06 22:03:36,458 - INFO - >>> Silver table created
+2024-10-06 22:03:36,655 - INFO - >>> Data inserted into the silver table (silver.plano_agro) successfully
+2024-10-06 22:03:36,671 - INFO - ----------------------------------------------------------------------
+2024-10-06 22:03:36,672 - INFO - >>> Starts processing the table plano_curitiba ...
+2024-10-06 22:03:36,673 - INFO - >>> Starts ingesting the table plano_curitiba in the bronze layer
+2024-10-06 22:03:36,688 - INFO - >>> PDF file read successfully
+2024-10-06 22:03:40,593 - INFO - >>> File content stored in a tuple
+2024-10-06 22:03:40,614 - INFO - >>> Bronze table created
+2024-10-06 22:03:40,791 - INFO - >>> Data inserted into the bronze table (bronze.plano_curitiba) successfully
+2024-10-06 22:03:40,806 - INFO - ----------------------------------------------------------------------
+2024-10-06 22:03:40,807 - INFO - >>> Starts ingesting the table plano_curitiba in the silver layer
+2024-10-06 22:03:40,820 - INFO - >>> PDF file read successfully
+2024-10-06 22:03:44,764 - INFO - >>> Processed data stored in a tuple
+2024-10-06 22:03:44,790 - INFO - >>> Silver table created
+2024-10-06 22:03:44,966 - INFO - >>> Data inserted into the silver table (silver.plano_curitiba) successfully
+2024-10-06 22:03:44,984 - INFO - ----------------------------------------------------------------------
+2024-10-06 22:03:44,985 - INFO - >>> Starts processing the table plano_federal ...
+2024-10-06 22:03:44,985 - INFO - >>> Starts ingesting the table plano_federal in the bronze layer
+2024-10-06 22:03:45,012 - INFO - >>> PDF file read successfully
+2024-10-06 22:04:20,867 - INFO - >>> File content stored in a tuple
+2024-10-06 22:04:20,888 - INFO - >>> Bronze table created
+2024-10-06 22:04:21,389 - INFO - >>> Data inserted into the bronze table (bronze.plano_federal) successfully
+2024-10-06 22:04:21,412 - INFO - ----------------------------------------------------------------------
+2024-10-06 22:04:21,413 - INFO - >>> Starts ingesting the table plano_federal in the silver layer
+2024-10-06 22:04:21,440 - INFO - >>> PDF file read successfully
+2024-10-06 22:04:33,985 - INFO - >>> Processed data stored in a tuple
+2024-10-06 22:04:34,007 - INFO - >>> Silver table created
+2024-10-06 22:04:34,522 - INFO - >>> Data inserted into the silver table (silver.plano_federal) successfully
+2024-10-06 22:04:34,546 - INFO - ----------------------------------------------------------------------
+2024-10-06 22:04:34,547 - INFO - >>> Starts processing the table plano_itabirito ...
+2024-10-06 22:04:34,547 - INFO - >>> Starts ingesting the table plano_itabirito in the bronze layer
+2024-10-06 22:04:34,549 - INFO - >>> PDF file read successfully
+2024-10-06 22:04:38,254 - INFO - >>> File content stored in a tuple
+2024-10-06 22:04:38,276 - INFO - >>> Bronze table created
+2024-10-06 22:04:38,378 - INFO - >>> Data inserted into the bronze table (bronze.plano_itabirito) successfully
+2024-10-06 22:04:38,396 - INFO - ----------------------------------------------------------------------
+2024-10-06 22:04:38,397 - INFO - >>> Starts ingesting the table plano_itabirito in the silver layer
+2024-10-06 22:04:38,400 - INFO - >>> PDF file read successfully
+2024-10-06 22:04:41,993 - INFO - >>> Processed data stored in a tuple
+2024-10-06 22:04:42,011 - INFO - >>> Silver table created
+2024-10-06 22:04:42,124 - INFO - >>> Data inserted into the silver table (silver.plano_itabirito) successfully
+2024-10-06 22:04:42,139 - INFO - ----------------------------------------------------------------------
+2024-10-06 22:04:42,140 - INFO - >>> Starts processing the table plano_joao_pessoa ...
+2024-10-06 22:04:42,140 - INFO - >>> Starts ingesting the table plano_joao_pessoa in the bronze layer
+2024-10-06 22:04:42,173 - INFO - >>> PDF file read successfully
+2024-10-06 22:05:23,061 - INFO - >>> File content stored in a tuple
+2024-10-06 22:05:23,085 - INFO - >>> Bronze table created
+2024-10-06 22:05:23,210 - INFO - >>> Data inserted into the bronze table (bronze.plano_joao_pessoa) successfully
+2024-10-06 22:05:23,223 - INFO - ----------------------------------------------------------------------
+2024-10-06 22:05:23,223 - INFO - >>> Starts ingesting the table plano_joao_pessoa in the silver layer
+2024-10-06 22:05:23,255 - INFO - >>> PDF file read successfully
+2024-10-06 22:06:02,776 - INFO - >>> Processed data stored in a tuple
+2024-10-06 22:06:02,796 - INFO - >>> Silver table created
+2024-10-06 22:06:02,926 - INFO - >>> Data inserted into the silver table (silver.plano_joao_pessoa) successfully
+2024-10-06 22:06:02,937 - INFO - ----------------------------------------------------------------------
+2024-10-06 22:06:02,938 - INFO - >>> Starts processing the table plano_sp ...
+2024-10-06 22:06:02,938 - INFO - >>> Starts ingesting the table plano_sp in the bronze layer
+2024-10-06 22:06:02,955 - INFO - >>> PDF file read successfully
+2024-10-06 22:06:11,322 - INFO - >>> File content stored in a tuple
+2024-10-06 22:06:11,343 - INFO - >>> Bronze table created
+2024-10-06 22:06:11,508 - INFO - >>> Data inserted into the bronze table (bronze.plano_sp) successfully
+2024-10-06 22:06:11,524 - INFO - ----------------------------------------------------------------------
+2024-10-06 22:06:11,524 - INFO - >>> Starts ingesting the table plano_sp in the silver layer
+2024-10-06 22:06:11,540 - INFO - >>> PDF file read successfully
+2024-10-06 22:06:19,545 - INFO - >>> Processed data stored in a tuple
+2024-10-06 22:06:19,568 - INFO - >>> Silver table created
+2024-10-06 22:06:19,737 - INFO - >>> Data inserted into the silver table (silver.plano_sp) successfully
+2024-10-06 22:06:19,749 - INFO - ----------------------------------------------------------------------
+2024-10-06 22:06:19,750 - INFO - >>> Starts processing the table enfrentamento_nacional ...
+2024-10-06 22:06:19,750 - INFO - >>> Starts ingesting the table enfrentamento_nacional in the bronze layer
+2024-10-06 22:06:19,752 - INFO - >>> PDF file read successfully
+2024-10-06 22:06:20,799 - INFO - >>> File content stored in a tuple
+2024-10-06 22:06:20,820 - INFO - >>> Bronze table created
+2024-10-06 22:06:20,914 - INFO - >>> Data inserted into the bronze table (bronze.enfrentamento_nacional) successfully
+2024-10-06 22:06:20,927 - INFO - ----------------------------------------------------------------------
+2024-10-06 22:06:20,928 - INFO - >>> Starts ingesting the table enfrentamento_nacional in the silver layer
+2024-10-06 22:06:20,929 - INFO - >>> PDF file read successfully
+2024-10-06 22:06:21,947 - INFO - >>> Processed data stored in a tuple
+2024-10-06 22:06:21,968 - INFO - >>> Silver table created
+2024-10-06 22:06:22,056 - INFO - >>> Data inserted into the silver table (silver.enfrentamento_nacional) successfully
+2024-10-06 22:06:22,071 - INFO - ----------------------------------------------------------------------

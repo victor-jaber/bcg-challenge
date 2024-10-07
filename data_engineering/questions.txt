@@ -1,0 +1,7 @@
+- Formato do entregável: será um arquivo zip do código?
+
+- No codigo final que formos enviar, vamos já deixar o banco de dados salvo. Logo, o script identifica que o banco de dados está populado e não executa novamente todo processo de ingestão e ETL (como os pdf's são estáticos, basta rodar o ETL uma única vez).
+Mas caso o time BCG queira executar a leitura e tratamento dos dados novamente de ponta a ponta, basta deletar o arquivo de checkpoint datalake.db (localizado na pasta "database" do projeto)
+
+Vamos enviar dessa forma e deixar esse comentário no read.me. Tudo bem fazermos assim?
+
