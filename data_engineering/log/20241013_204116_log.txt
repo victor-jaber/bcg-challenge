@@ -1,0 +1,259 @@
+2024-10-13 20:41:16,912 - INFO - Configured the log function. Log file in C:/Users/Micro/Downloads/BCG_X_CHALLENGE/desenv/log/20241013_204116_log.txt
+2024-10-13 20:41:16,913 - INFO - Only keeps the last 5 log files. Files removed: ['20241013_185505_log.txt']
+2024-10-13 20:41:16,914 - INFO - duckdb database does not exists
+2024-10-13 20:41:16,914 - INFO - >>> Starts processing the table plano_nacional ...
+2024-10-13 20:41:16,914 - INFO - >>> Starts ingesting the table plano_nacional in the bronze layer
+2024-10-13 20:41:16,926 - INFO - >>> PDF file read successfully
+2024-10-13 20:41:28,589 - INFO - >>> File content stored in a tuple
+2024-10-13 20:41:28,611 - INFO - >>> Bronze table created
+2024-10-13 20:41:29,488 - INFO - >>> Data inserted into the bronze table (bronze.plano_nacional) successfully
+2024-10-13 20:41:29,496 - INFO - ----------------------------------------------------------------------
+2024-10-13 20:41:29,498 - INFO - >>> Starts ingesting the table plano_nacional in the silver layer
+2024-10-13 20:41:29,508 - INFO - >>> PDF file read successfully
+2024-10-13 20:44:40,704 - INFO - >>> Processed data stored in a tuple
+2024-10-13 20:44:40,726 - INFO - >>> Silver table created
+2024-10-13 20:44:41,158 - INFO - >>> Data inserted into the silver table (silver.plano_nacional) successfully
+2024-10-13 20:44:41,167 - INFO - ----------------------------------------------------------------------
+2024-10-13 20:44:41,168 - INFO - >>> Starts ingesting the table plano_nacional in the gold layer
+2024-10-13 20:46:38,561 - WARNING - Created a chunk of size 1044, which is longer than the specified 1024
+2024-10-13 20:46:38,563 - WARNING - Created a chunk of size 1044, which is longer than the specified 1024
+2024-10-13 20:48:30,276 - WARNING - Created a chunk of size 1480, which is longer than the specified 1024
+2024-10-13 20:48:30,276 - WARNING - Created a chunk of size 1480, which is longer than the specified 1024
+2024-10-13 20:49:20,799 - WARNING - Created a chunk of size 1194, which is longer than the specified 1024
+2024-10-13 20:49:20,800 - WARNING - Created a chunk of size 1194, which is longer than the specified 1024
+2024-10-13 20:50:08,270 - WARNING - Created a chunk of size 1164, which is longer than the specified 1024
+2024-10-13 20:50:08,272 - WARNING - Created a chunk of size 1164, which is longer than the specified 1024
+2024-10-13 20:50:10,669 - WARNING - Created a chunk of size 1390, which is longer than the specified 1024
+2024-10-13 20:50:10,670 - WARNING - Created a chunk of size 1390, which is longer than the specified 1024
+2024-10-13 20:50:45,259 - WARNING - Created a chunk of size 1037, which is longer than the specified 1024
+2024-10-13 20:50:45,262 - WARNING - Created a chunk of size 1037, which is longer than the specified 1024
+2024-10-13 20:51:28,127 - WARNING - Created a chunk of size 1124, which is longer than the specified 1024
+2024-10-13 20:51:28,128 - WARNING - Created a chunk of size 1124, which is longer than the specified 1024
+2024-10-13 20:52:50,388 - WARNING - Created a chunk of size 1594, which is longer than the specified 1024
+2024-10-13 20:52:50,389 - WARNING - Created a chunk of size 1594, which is longer than the specified 1024
+2024-10-13 20:52:52,013 - WARNING - Created a chunk of size 1217, which is longer than the specified 1024
+2024-10-13 20:52:52,016 - WARNING - Created a chunk of size 1217, which is longer than the specified 1024
+2024-10-13 20:53:07,333 - WARNING - Created a chunk of size 1424, which is longer than the specified 1024
+2024-10-13 20:53:07,336 - WARNING - Created a chunk of size 1424, which is longer than the specified 1024
+2024-10-13 20:53:12,089 - INFO - >>> Get the list of data after embedding function
+2024-10-13 20:53:12,162 - INFO - >>> The data that will be ingested into the gold layer were organized
+2024-10-13 20:53:12,186 - INFO - >>> Gold table created
+2024-10-13 20:53:14,064 - INFO - >>> Data inserted into the gold table (gold.plano_nacional) successfully
+2024-10-13 20:53:14,113 - INFO - ----------------------------------------------------------------------
+2024-10-13 20:53:14,134 - INFO - >>> Starts processing the table plano_agro ...
+2024-10-13 20:53:14,135 - INFO - >>> Starts ingesting the table plano_agro in the bronze layer
+2024-10-13 20:53:14,140 - INFO - >>> PDF file read successfully
+2024-10-13 20:53:17,762 - INFO - >>> File content stored in a tuple
+2024-10-13 20:53:17,785 - INFO - >>> Bronze table created
+2024-10-13 20:53:17,959 - INFO - >>> Data inserted into the bronze table (bronze.plano_agro) successfully
+2024-10-13 20:53:17,975 - INFO - ----------------------------------------------------------------------
+2024-10-13 20:53:17,976 - INFO - >>> Starts ingesting the table plano_agro in the silver layer
+2024-10-13 20:53:17,980 - INFO - >>> PDF file read successfully
+2024-10-13 20:54:26,583 - INFO - >>> Processed data stored in a tuple
+2024-10-13 20:54:26,605 - INFO - >>> Silver table created
+2024-10-13 20:54:26,780 - INFO - >>> Data inserted into the silver table (silver.plano_agro) successfully
+2024-10-13 20:54:26,794 - INFO - ----------------------------------------------------------------------
+2024-10-13 20:54:26,794 - INFO - >>> Starts ingesting the table plano_agro in the gold layer
+2024-10-13 20:54:43,318 - WARNING - Created a chunk of size 1367, which is longer than the specified 1024
+2024-10-13 20:54:43,320 - WARNING - Created a chunk of size 1367, which is longer than the specified 1024
+2024-10-13 20:56:05,119 - WARNING - Created a chunk of size 1525, which is longer than the specified 1024
+2024-10-13 20:56:05,119 - WARNING - Created a chunk of size 1525, which is longer than the specified 1024
+2024-10-13 20:56:10,763 - WARNING - Created a chunk of size 1361, which is longer than the specified 1024
+2024-10-13 20:56:10,765 - WARNING - Created a chunk of size 1361, which is longer than the specified 1024
+2024-10-13 20:56:22,126 - WARNING - Created a chunk of size 2010, which is longer than the specified 1024
+2024-10-13 20:56:22,126 - WARNING - Created a chunk of size 2010, which is longer than the specified 1024
+2024-10-13 20:56:30,931 - WARNING - Created a chunk of size 1179, which is longer than the specified 1024
+2024-10-13 20:56:30,933 - WARNING - Created a chunk of size 1179, which is longer than the specified 1024
+2024-10-13 20:56:36,621 - WARNING - Created a chunk of size 1824, which is longer than the specified 1024
+2024-10-13 20:56:36,622 - WARNING - Created a chunk of size 1824, which is longer than the specified 1024
+2024-10-13 20:56:57,623 - INFO - >>> Get the list of data after embedding function
+2024-10-13 20:56:57,653 - INFO - >>> The data that will be ingested into the gold layer were organized
+2024-10-13 20:56:57,676 - INFO - >>> Gold table created
+2024-10-13 20:56:58,341 - INFO - >>> Data inserted into the gold table (gold.plano_agro) successfully
+2024-10-13 20:56:58,373 - INFO - ----------------------------------------------------------------------
+2024-10-13 20:56:58,380 - INFO - >>> Starts processing the table plano_curitiba ...
+2024-10-13 20:56:58,381 - INFO - >>> Starts ingesting the table plano_curitiba in the bronze layer
+2024-10-13 20:56:58,410 - INFO - >>> PDF file read successfully
+2024-10-13 20:57:02,351 - INFO - >>> File content stored in a tuple
+2024-10-13 20:57:02,372 - INFO - >>> Bronze table created
+2024-10-13 20:57:02,522 - INFO - >>> Data inserted into the bronze table (bronze.plano_curitiba) successfully
+2024-10-13 20:57:02,535 - INFO - ----------------------------------------------------------------------
+2024-10-13 20:57:02,536 - INFO - >>> Starts ingesting the table plano_curitiba in the silver layer
+2024-10-13 20:57:02,549 - INFO - >>> PDF file read successfully
+2024-10-13 20:58:00,045 - INFO - >>> Processed data stored in a tuple
+2024-10-13 20:58:00,072 - INFO - >>> Silver table created
+2024-10-13 20:58:00,216 - INFO - >>> Data inserted into the silver table (silver.plano_curitiba) successfully
+2024-10-13 20:58:00,230 - INFO - ----------------------------------------------------------------------
+2024-10-13 20:58:00,231 - INFO - >>> Starts ingesting the table plano_curitiba in the gold layer
+2024-10-13 20:58:25,808 - WARNING - Created a chunk of size 1035, which is longer than the specified 1024
+2024-10-13 20:58:25,810 - WARNING - Created a chunk of size 1035, which is longer than the specified 1024
+2024-10-13 20:59:14,891 - WARNING - Created a chunk of size 1160, which is longer than the specified 1024
+2024-10-13 20:59:14,892 - WARNING - Created a chunk of size 1160, which is longer than the specified 1024
+2024-10-13 20:59:49,644 - INFO - >>> Get the list of data after embedding function
+2024-10-13 20:59:49,688 - INFO - >>> The data that will be ingested into the gold layer were organized
+2024-10-13 20:59:49,715 - INFO - >>> Gold table created
+2024-10-13 20:59:50,246 - INFO - >>> Data inserted into the gold table (gold.plano_curitiba) successfully
+2024-10-13 20:59:50,270 - INFO - ----------------------------------------------------------------------
+2024-10-13 20:59:50,277 - INFO - >>> Starts processing the table plano_federal ...
+2024-10-13 20:59:50,278 - INFO - >>> Starts ingesting the table plano_federal in the bronze layer
+2024-10-13 20:59:50,338 - INFO - >>> PDF file read successfully
+2024-10-13 21:00:23,700 - INFO - >>> File content stored in a tuple
+2024-10-13 21:00:23,718 - INFO - >>> Bronze table created
+2024-10-13 21:00:24,213 - INFO - >>> Data inserted into the bronze table (bronze.plano_federal) successfully
+2024-10-13 21:00:24,235 - INFO - ----------------------------------------------------------------------
+2024-10-13 21:00:24,236 - INFO - >>> Starts ingesting the table plano_federal in the silver layer
+2024-10-13 21:00:24,260 - INFO - >>> PDF file read successfully
+2024-10-13 21:04:37,442 - INFO - >>> Processed data stored in a tuple
+2024-10-13 21:04:37,569 - INFO - >>> Silver table created
+2024-10-13 21:04:38,064 - INFO - >>> Data inserted into the silver table (silver.plano_federal) successfully
+2024-10-13 21:04:38,088 - INFO - ----------------------------------------------------------------------
+2024-10-13 21:04:38,090 - INFO - >>> Starts ingesting the table plano_federal in the gold layer
+2024-10-13 21:05:00,081 - WARNING - Created a chunk of size 1456, which is longer than the specified 1024
+2024-10-13 21:05:00,084 - WARNING - Created a chunk of size 1456, which is longer than the specified 1024
+2024-10-13 21:07:59,824 - WARNING - Created a chunk of size 1232, which is longer than the specified 1024
+2024-10-13 21:07:59,827 - WARNING - Created a chunk of size 1232, which is longer than the specified 1024
+2024-10-13 21:09:00,162 - WARNING - Created a chunk of size 1613, which is longer than the specified 1024
+2024-10-13 21:09:00,162 - WARNING - Created a chunk of size 1613, which is longer than the specified 1024
+2024-10-13 21:10:24,902 - WARNING - Created a chunk of size 1200, which is longer than the specified 1024
+2024-10-13 21:10:24,905 - WARNING - Created a chunk of size 1200, which is longer than the specified 1024
+2024-10-13 21:11:24,371 - WARNING - Created a chunk of size 1107, which is longer than the specified 1024
+2024-10-13 21:11:24,373 - WARNING - Created a chunk of size 1107, which is longer than the specified 1024
+2024-10-13 21:13:58,723 - INFO - >>> Get the list of data after embedding function
+2024-10-13 21:13:58,811 - INFO - >>> The data that will be ingested into the gold layer were organized
+2024-10-13 21:13:58,833 - INFO - >>> Gold table created
+2024-10-13 21:14:01,156 - INFO - >>> Data inserted into the gold table (gold.plano_federal) successfully
+2024-10-13 21:14:01,217 - INFO - ----------------------------------------------------------------------
+2024-10-13 21:14:01,266 - INFO - >>> Starts processing the table plano_itabirito ...
+2024-10-13 21:14:01,267 - INFO - >>> Starts ingesting the table plano_itabirito in the bronze layer
+2024-10-13 21:14:01,294 - INFO - >>> PDF file read successfully
+2024-10-13 21:14:06,564 - INFO - >>> File content stored in a tuple
+2024-10-13 21:14:06,587 - INFO - >>> Bronze table created
+2024-10-13 21:14:06,706 - INFO - >>> Data inserted into the bronze table (bronze.plano_itabirito) successfully
+2024-10-13 21:14:06,729 - INFO - ----------------------------------------------------------------------
+2024-10-13 21:14:06,729 - INFO - >>> Starts ingesting the table plano_itabirito in the silver layer
+2024-10-13 21:14:06,733 - INFO - >>> PDF file read successfully
+2024-10-13 21:14:55,732 - INFO - >>> Processed data stored in a tuple
+2024-10-13 21:14:55,753 - INFO - >>> Silver table created
+2024-10-13 21:14:55,865 - INFO - >>> Data inserted into the silver table (silver.plano_itabirito) successfully
+2024-10-13 21:14:55,883 - INFO - ----------------------------------------------------------------------
+2024-10-13 21:14:55,885 - INFO - >>> Starts ingesting the table plano_itabirito in the gold layer
+2024-10-13 21:16:07,648 - WARNING - Created a chunk of size 2333, which is longer than the specified 1024
+2024-10-13 21:16:07,648 - WARNING - Created a chunk of size 2333, which is longer than the specified 1024
+2024-10-13 21:16:08,724 - WARNING - Created a chunk of size 1864, which is longer than the specified 1024
+2024-10-13 21:16:08,725 - WARNING - Created a chunk of size 1864, which is longer than the specified 1024
+2024-10-13 21:16:11,216 - WARNING - Created a chunk of size 1505, which is longer than the specified 1024
+2024-10-13 21:16:11,218 - WARNING - Created a chunk of size 1505, which is longer than the specified 1024
+2024-10-13 21:16:16,340 - WARNING - Created a chunk of size 1164, which is longer than the specified 1024
+2024-10-13 21:16:16,343 - WARNING - Created a chunk of size 1164, which is longer than the specified 1024
+2024-10-13 21:16:20,129 - INFO - >>> Get the list of data after embedding function
+2024-10-13 21:16:20,141 - INFO - >>> The data that will be ingested into the gold layer were organized
+2024-10-13 21:16:20,166 - INFO - >>> Gold table created
+2024-10-13 21:16:20,569 - INFO - >>> Data inserted into the gold table (gold.plano_itabirito) successfully
+2024-10-13 21:16:20,592 - INFO - ----------------------------------------------------------------------
+2024-10-13 21:16:20,597 - INFO - >>> Starts processing the table plano_joao_pessoa ...
+2024-10-13 21:16:20,598 - INFO - >>> Starts ingesting the table plano_joao_pessoa in the bronze layer
+2024-10-13 21:16:20,725 - INFO - >>> PDF file read successfully
+2024-10-13 21:17:07,072 - INFO - >>> File content stored in a tuple
+2024-10-13 21:17:07,094 - INFO - >>> Bronze table created
+2024-10-13 21:17:07,223 - INFO - >>> Data inserted into the bronze table (bronze.plano_joao_pessoa) successfully
+2024-10-13 21:17:07,237 - INFO - ----------------------------------------------------------------------
+2024-10-13 21:17:07,238 - INFO - >>> Starts ingesting the table plano_joao_pessoa in the silver layer
+2024-10-13 21:17:07,271 - INFO - >>> PDF file read successfully
+2024-10-13 21:18:46,077 - INFO - >>> Processed data stored in a tuple
+2024-10-13 21:18:46,098 - INFO - >>> Silver table created
+2024-10-13 21:18:46,230 - INFO - >>> Data inserted into the silver table (silver.plano_joao_pessoa) successfully
+2024-10-13 21:18:46,243 - INFO - ----------------------------------------------------------------------
+2024-10-13 21:18:46,244 - INFO - >>> Starts ingesting the table plano_joao_pessoa in the gold layer
+2024-10-13 21:20:49,926 - INFO - >>> Get the list of data after embedding function
+2024-10-13 21:20:49,955 - INFO - >>> The data that will be ingested into the gold layer were organized
+2024-10-13 21:20:49,978 - INFO - >>> Gold table created
+2024-10-13 21:20:50,487 - INFO - >>> Data inserted into the gold table (gold.plano_joao_pessoa) successfully
+2024-10-13 21:20:50,511 - INFO - ----------------------------------------------------------------------
+2024-10-13 21:20:50,520 - INFO - >>> Starts processing the table plano_sp ...
+2024-10-13 21:20:50,521 - INFO - >>> Starts ingesting the table plano_sp in the bronze layer
+2024-10-13 21:20:50,588 - INFO - >>> PDF file read successfully
+2024-10-13 21:21:00,223 - INFO - >>> File content stored in a tuple
+2024-10-13 21:21:00,246 - INFO - >>> Bronze table created
+2024-10-13 21:21:00,414 - INFO - >>> Data inserted into the bronze table (bronze.plano_sp) successfully
+2024-10-13 21:21:00,429 - INFO - ----------------------------------------------------------------------
+2024-10-13 21:21:00,429 - INFO - >>> Starts ingesting the table plano_sp in the silver layer
+2024-10-13 21:21:00,446 - INFO - >>> PDF file read successfully
+2024-10-13 21:22:12,871 - INFO - >>> Processed data stored in a tuple
+2024-10-13 21:22:12,894 - INFO - >>> Silver table created
+2024-10-13 21:22:13,057 - INFO - >>> Data inserted into the silver table (silver.plano_sp) successfully
+2024-10-13 21:22:13,077 - INFO - ----------------------------------------------------------------------
+2024-10-13 21:22:13,077 - INFO - >>> Starts ingesting the table plano_sp in the gold layer
+2024-10-13 21:22:39,973 - WARNING - Created a chunk of size 1168, which is longer than the specified 1024
+2024-10-13 21:22:39,983 - WARNING - Created a chunk of size 1168, which is longer than the specified 1024
+2024-10-13 21:23:02,527 - WARNING - Created a chunk of size 1047, which is longer than the specified 1024
+2024-10-13 21:23:02,529 - WARNING - Created a chunk of size 1047, which is longer than the specified 1024
+2024-10-13 21:23:20,544 - WARNING - Created a chunk of size 1072, which is longer than the specified 1024
+2024-10-13 21:23:20,545 - WARNING - Created a chunk of size 1072, which is longer than the specified 1024
+2024-10-13 21:23:38,519 - WARNING - Created a chunk of size 1506, which is longer than the specified 1024
+2024-10-13 21:23:38,521 - WARNING - Created a chunk of size 1506, which is longer than the specified 1024
+2024-10-13 21:23:47,493 - WARNING - Created a chunk of size 1577, which is longer than the specified 1024
+2024-10-13 21:23:47,495 - WARNING - Created a chunk of size 1577, which is longer than the specified 1024
+2024-10-13 21:24:37,362 - INFO - >>> Get the list of data after embedding function
+2024-10-13 21:24:37,394 - INFO - >>> The data that will be ingested into the gold layer were organized
+2024-10-13 21:24:37,418 - INFO - >>> Gold table created
+2024-10-13 21:24:38,104 - INFO - >>> Data inserted into the gold table (gold.plano_sp) successfully
+2024-10-13 21:24:38,137 - INFO - ----------------------------------------------------------------------
+2024-10-13 21:24:38,145 - INFO - >>> Starts processing the table enfrentamento_nacional ...
+2024-10-13 21:24:38,147 - INFO - >>> Starts ingesting the table enfrentamento_nacional in the bronze layer
+2024-10-13 21:24:38,176 - INFO - >>> PDF file read successfully
+2024-10-13 21:24:39,953 - INFO - >>> File content stored in a tuple
+2024-10-13 21:24:39,981 - INFO - >>> Bronze table created
+2024-10-13 21:24:40,083 - INFO - >>> Data inserted into the bronze table (bronze.enfrentamento_nacional) successfully
+2024-10-13 21:24:40,106 - INFO - ----------------------------------------------------------------------
+2024-10-13 21:24:40,107 - INFO - >>> Starts ingesting the table enfrentamento_nacional in the silver layer
+2024-10-13 21:24:40,110 - INFO - >>> PDF file read successfully
+2024-10-13 21:25:17,635 - INFO - >>> Processed data stored in a tuple
+2024-10-13 21:25:17,656 - INFO - >>> Silver table created
+2024-10-13 21:25:17,746 - INFO - >>> Data inserted into the silver table (silver.enfrentamento_nacional) successfully
+2024-10-13 21:25:17,761 - INFO - ----------------------------------------------------------------------
+2024-10-13 21:25:17,762 - INFO - >>> Starts ingesting the table enfrentamento_nacional in the gold layer
+2024-10-13 21:25:26,521 - WARNING - Created a chunk of size 1288, which is longer than the specified 1024
+2024-10-13 21:25:26,522 - WARNING - Created a chunk of size 1288, which is longer than the specified 1024
+2024-10-13 21:25:31,596 - WARNING - Created a chunk of size 3813, which is longer than the specified 1024
+2024-10-13 21:25:31,597 - WARNING - Created a chunk of size 3813, which is longer than the specified 1024
+2024-10-13 21:25:33,403 - WARNING - Created a chunk of size 1196, which is longer than the specified 1024
+2024-10-13 21:25:33,404 - WARNING - Created a chunk of size 1196, which is longer than the specified 1024
+2024-10-13 21:25:38,812 - WARNING - Created a chunk of size 3377, which is longer than the specified 1024
+2024-10-13 21:25:38,813 - WARNING - Created a chunk of size 3377, which is longer than the specified 1024
+2024-10-13 21:25:40,161 - WARNING - Created a chunk of size 1138, which is longer than the specified 1024
+2024-10-13 21:25:40,162 - WARNING - Created a chunk of size 1138, which is longer than the specified 1024
+2024-10-13 21:25:42,703 - WARNING - Created a chunk of size 2821, which is longer than the specified 1024
+2024-10-13 21:25:42,705 - WARNING - Created a chunk of size 2821, which is longer than the specified 1024
+2024-10-13 21:25:46,125 - WARNING - Created a chunk of size 1936, which is longer than the specified 1024
+2024-10-13 21:25:46,126 - WARNING - Created a chunk of size 1936, which is longer than the specified 1024
+2024-10-13 21:25:49,440 - WARNING - Created a chunk of size 3087, which is longer than the specified 1024
+2024-10-13 21:25:49,441 - WARNING - Created a chunk of size 3087, which is longer than the specified 1024
+2024-10-13 21:25:55,811 - WARNING - Created a chunk of size 1223, which is longer than the specified 1024
+2024-10-13 21:25:55,814 - WARNING - Created a chunk of size 1223, which is longer than the specified 1024
+2024-10-13 21:26:10,832 - WARNING - Created a chunk of size 1125, which is longer than the specified 1024
+2024-10-13 21:26:10,833 - WARNING - Created a chunk of size 1125, which is longer than the specified 1024
+2024-10-13 21:26:19,004 - WARNING - Created a chunk of size 2187, which is longer than the specified 1024
+2024-10-13 21:26:19,006 - WARNING - Created a chunk of size 2187, which is longer than the specified 1024
+2024-10-13 21:26:27,811 - WARNING - Created a chunk of size 1433, which is longer than the specified 1024
+2024-10-13 21:26:27,812 - WARNING - Created a chunk of size 1433, which is longer than the specified 1024
+2024-10-13 21:26:37,601 - WARNING - Created a chunk of size 1128, which is longer than the specified 1024
+2024-10-13 21:26:37,601 - WARNING - Created a chunk of size 1128, which is longer than the specified 1024
+2024-10-13 21:26:44,499 - WARNING - Created a chunk of size 1276, which is longer than the specified 1024
+2024-10-13 21:26:44,502 - WARNING - Created a chunk of size 1276, which is longer than the specified 1024
+2024-10-13 21:26:46,691 - WARNING - Created a chunk of size 1753, which is longer than the specified 1024
+2024-10-13 21:26:46,692 - WARNING - Created a chunk of size 1753, which is longer than the specified 1024
+2024-10-13 21:26:51,328 - WARNING - Created a chunk of size 1116, which is longer than the specified 1024
+2024-10-13 21:26:51,329 - WARNING - Created a chunk of size 1116, which is longer than the specified 1024
+2024-10-13 21:26:56,411 - WARNING - Created a chunk of size 1452, which is longer than the specified 1024
+2024-10-13 21:26:56,414 - WARNING - Created a chunk of size 1452, which is longer than the specified 1024
+2024-10-13 21:27:07,477 - WARNING - Created a chunk of size 1281, which is longer than the specified 1024
+2024-10-13 21:27:07,478 - WARNING - Created a chunk of size 1281, which is longer than the specified 1024
+2024-10-13 21:27:10,318 - WARNING - Created a chunk of size 1258, which is longer than the specified 1024
+2024-10-13 21:27:10,320 - WARNING - Created a chunk of size 1258, which is longer than the specified 1024
+2024-10-13 21:27:20,735 - WARNING - Created a chunk of size 1032, which is longer than the specified 1024
+2024-10-13 21:27:20,738 - WARNING - Created a chunk of size 1032, which is longer than the specified 1024
+2024-10-13 21:27:28,040 - INFO - >>> Get the list of data after embedding function
+2024-10-13 21:27:28,060 - INFO - >>> The data that will be ingested into the gold layer were organized
+2024-10-13 21:27:28,086 - INFO - >>> Gold table created
+2024-10-13 21:27:28,386 - INFO - >>> Data inserted into the gold table (gold.enfrentamento_nacional) successfully
+2024-10-13 21:27:28,411 - INFO - ----------------------------------------------------------------------

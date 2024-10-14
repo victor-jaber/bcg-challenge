@@ -46,6 +46,7 @@ def log(config):
                                  logging.StreamHandler()                                       # print in the terminal
                                  ]
                         )
+    logging.getLogger("httpx").setLevel(logging.WARNING)
     logging.info(f'Configured the log function. Log file in {get_dir_proj()}/log/{dt}_log.txt')
     # Only keeps the recent logs files
     num_files = ast.literal_eval(config["LOG"]["NUM_FILES"]) # number of files that will be stored

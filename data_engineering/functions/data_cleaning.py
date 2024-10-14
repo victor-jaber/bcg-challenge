@@ -3,6 +3,9 @@
 # ========================================================================== #
 
 import re
+import spacy
+from nltk.corpus import stopwords
+
 
 def remove_header(text, start):
     '''
@@ -14,7 +17,7 @@ def remove_header(text, start):
 
 def remove_end(text, end):
     '''
-    Remove end of file. In general, it is the page number
+    Remove end of file. In general, it is the page number (page footer)
     '''
     if end == 0:
         return text
@@ -28,3 +31,27 @@ def remove_unwanted_chr(text, chr):
     for x in chr:
         text = re.sub(x, ' ', text)
     return text
+
+
+def remove_stopwords(text):
+    '''
+    Remove stop words from text
+    '''
+    stop_words = set(stopwords.words('portuguese'))
+    word_tokens = text.split(' ')
+    text_filt = [word for word in word_tokens if word.lower() not in stop_words]
+    text_filt = " ".join(text_filt)
+    return text_filt
+
+
+def lemmatize_text(text):
+    '''
+    Function for text lemmatization
+    '''
+    # Upload the model to Portuguese
+    nlp = spacy.load('pt_core_news_sm')
+    
+    # Returns the lemma
+    text = nlp(text)
+    lemmas = [token.lemma_ for token in text]
+    return ' '.join(lemmas)

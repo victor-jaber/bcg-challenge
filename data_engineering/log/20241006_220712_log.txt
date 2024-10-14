@@ -1,2 +1,0 @@
-2024-10-06 22:07:12,965 - INFO - Configured the log function. Log file in C:/Users/Micro/Downloads/BCG_X_CHALLENGE/desenv/log/20241006_220712_log.txt
-2024-10-06 22:07:12,966 - INFO - duckdb database already exists!

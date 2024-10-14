@@ -3,7 +3,7 @@ from configparser import ConfigParser
 from functions.utils import get_dir_config, database_exists, log
 from functions.bronze_ingestion import bronze_data_ingestion
 from functions.silver_ingestion import silver_data_ingestion
-
+from functions.gold_ingestion import gold_data_ingestion
 
 ## Read the config.ini in order to get the file name and table name for each PDF
 ini_config = get_dir_config()
@@ -30,6 +30,8 @@ if not database_exists(logger):
 
         # Silver ingestion
         logger.info(f'>>> Starts ingesting the table {table_name} in the silver layer')
-        silver_data_ingestion(pdf_name, table_name, logger)
+        silver_data = silver_data_ingestion(pdf_name, table_name, logger)
 
         # Gold ingestion
+        logger.info(f'>>> Starts ingesting the table {table_name} in the gold layer')
+        gold_data_ingestion(table_name, silver_data, logger)

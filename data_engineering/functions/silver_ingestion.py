@@ -1,7 +1,7 @@
 import ast
 from configparser import ConfigParser
 from functions.utils import read_pdf, database_connection, get_dir_config
-from functions.data_cleaning import remove_end, remove_header, remove_unwanted_chr
+from functions.data_cleaning import remove_end, remove_header, remove_unwanted_chr, remove_stopwords, lemmatize_text
 
 
 def silver_data_ingestion(pdf_name, table_name, logger):
@@ -36,6 +36,8 @@ def silver_data_ingestion(pdf_name, table_name, logger):
                 page_content = remove_header(page_content, header)
             page_content = remove_unwanted_chr(page_content, unwanted_chr)
             page_content = remove_end(page_content, end)
+            page_content = remove_stopwords(page_content)
+            page_content = lemmatize_text(page_content)
         
         # Store the data in a tuple
         doc_tuple = (i, page_content)
@@ -70,3 +72,5 @@ def silver_data_ingestion(pdf_name, table_name, logger):
     cursor.close()
     conn.close()
     logger.info('----------------------------------------------------------------------')
+    return ingestion_data
+    
