@@ -259,7 +259,7 @@ SELECT
 FROM
 bronze.enfrentamento_nacional t1
 LEFT JOIN silver.enfrentamento_nacional t2 on (t1.page_number = t2.page_number)
-LEFT JOIN gold.enfrentamento_nacional t3 ON (t2.page_number = (t3.page_number+1))
+LEFT JOIN gold.enfrentamento_nacional t3 ON (t2.page_number = t3.page_number)
 ORDER BY t1.page_number 
 LIMIT 100
 
@@ -279,7 +279,7 @@ SELECT
 FROM
 bronze.plano_curitiba t1
 LEFT JOIN silver.plano_curitiba t2 on (t1.page_number = t2.page_number)
-LEFT JOIN gold.plano_curitiba t3 ON (t2.page_number = (t3.page_number+1))
+LEFT JOIN gold.plano_curitiba t3 ON (t2.page_number = t3.page_number)
 ORDER BY t1.page_number 
 LIMIT 100
 
@@ -299,7 +299,7 @@ SELECT
 FROM
 bronze.plano_agro t1
 LEFT JOIN silver.plano_agro t2 on (t1.page_number = t2.page_number)
-LEFT JOIN gold.plano_agro t3 ON (t2.page_number = (t3.page_number+1))
+LEFT JOIN gold.plano_agro t3 ON (t2.page_number = t3.page_number)
 ORDER BY t1.page_number 
 LIMIT 200
 
@@ -319,7 +319,7 @@ SELECT
 FROM
 bronze.plano_nacional t1
 LEFT JOIN silver.plano_nacional t2 on (t1.page_number = t2.page_number)
-LEFT JOIN gold.plano_nacional t3 ON (t2.page_number = (t3.page_number+1))
+LEFT JOIN gold.plano_nacional t3 ON (t2.page_number = t3.page_number)
 ORDER BY t1.page_number 
 LIMIT 200
 
@@ -339,7 +339,7 @@ SELECT
 FROM
 bronze.plano_sp t1
 LEFT JOIN silver.plano_sp t2 on (t1.page_number = t2.page_number)
-LEFT JOIN gold.plano_sp t3 ON (t2.page_number = (t3.page_number+1))
+LEFT JOIN gold.plano_sp t3 ON (t2.page_number = t3.page_number)
 ORDER BY t1.page_number 
 LIMIT 200
 
@@ -359,7 +359,7 @@ SELECT
 FROM
 bronze.plano_federal t1
 LEFT JOIN silver.plano_federal t2 on (t1.page_number = t2.page_number)
-LEFT JOIN gold.plano_federal t3 ON (t2.page_number = (t3.page_number+1))
+LEFT JOIN gold.plano_federal t3 ON (t2.page_number = t3.page_number)
 ORDER BY t1.page_number 
 LIMIT 200
 
@@ -379,7 +379,7 @@ SELECT
 FROM
 bronze.plano_itabirito t1
 LEFT JOIN silver.plano_itabirito t2 on (t1.page_number = t2.page_number)
-LEFT JOIN gold.plano_itabirito t3 ON (t2.page_number = (t3.page_number+1))
+LEFT JOIN gold.plano_itabirito t3 ON (t2.page_number = t3.page_number)
 ORDER BY t1.page_number 
 LIMIT 200
 
@@ -399,6 +399,6 @@ SELECT
 FROM
 bronze.plano_joao_pessoa t1
 LEFT JOIN silver.plano_joao_pessoa t2 on (t1.page_number = t2.page_number)
-LEFT JOIN gold.plano_joao_pessoa t3 ON (t2.page_number = (t3.page_number+1))
+LEFT JOIN gold.plano_joao_pessoa t3 ON (t2.page_number = t3.page_number)
 ORDER BY t1.page_number 
 LIMIT 200

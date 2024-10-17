@@ -55,3 +55,16 @@ def lemmatize_text(text):
     text = nlp(text)
     lemmas = [token.lemma_ for token in text]
     return ' '.join(lemmas)
+
+
+def remove_white_space(text):
+    return ' '.join(text.split())
+
+
+def cleaning_user_query(text):
+
+    text = remove_unwanted_chr(text, ["\n", "\xa0"])
+    text = remove_stopwords(text)
+    text = lemmatize_text(text)
+    text = remove_white_space(text)
+    return text

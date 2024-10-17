@@ -4,6 +4,7 @@ from functions.utils import get_dir_config, database_exists, log
 from functions.bronze_ingestion import bronze_data_ingestion
 from functions.silver_ingestion import silver_data_ingestion
 from functions.gold_ingestion import gold_data_ingestion
+from functions.get_message import process_input_with_retrieval
 
 ## Read the config.ini in order to get the file name and table name for each PDF
 ini_config = get_dir_config()
@@ -35,3 +36,12 @@ if not database_exists(logger):
         # Gold ingestion
         logger.info(f'>>> Starts ingesting the table {table_name} in the gold layer')
         gold_data_ingestion(table_name, silver_data, logger)
+
+
+# User query
+user_query = 'Quais fatores devo levar em consideração na hora de desenvolver um plano de adaptação climática para uma cidade de porte médio no Brasil?'
+
+# Model return
+final_response = process_input_with_retrieval(user_query)
+
+print(final_response)

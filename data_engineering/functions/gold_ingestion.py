@@ -24,9 +24,9 @@ def gold_data_ingestion(table_name, silver_data, logger):
 
     # Organizes the data that will be ingested in the gold layer
     ingestion_data = []
-    for page in range(len(embeddings_list)):
+    for page in range(1, len(embeddings_list)+1):
         try:
-            doc_tuple = (page, np.array(embeddings_list[page][0]))
+            doc_tuple = (page, np.array(embeddings_list[page-1][0]))
         except:
             doc_tuple = (page, [])
         ingestion_data.append(doc_tuple)
