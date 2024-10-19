@@ -342,11 +342,11 @@ export const ChatInput: FC<Props> = ({
           rel="noreferrer"
           className="underline"
         >
-          ChatX
+          Chatbot X
         </a>
         .{' '}
         {t(
-          "ChatX may make mistakes. Consider verifying important information.",
+          "Chatbot X may make mistakes. Consider verifying important information.",
         )}
       </div>
     </div>
