@@ -74,7 +74,8 @@ Activate the virtual environment using the command appropriate for your operatin
 
 ### 4. Install Dependencies
 
-Install the necessary libraries using the `requirements.txt` file included in the project:
+Install the necessary libraries using the `requirements.txt` file included in the project. 
+Ignore any errors or version conflicts.
 
 ```bash
 pip install -r requirements.txt
