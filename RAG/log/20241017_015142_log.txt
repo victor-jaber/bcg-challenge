@@ -1,0 +1,154 @@
+2024-10-17 01:51:42,653 - INFO - Configured the log function. Log file in C:/Users/Micro/Downloads/BCG_X_CHALLENGE/desenv/log/20241017_015142_log.txt
+2024-10-17 01:51:42,654 - INFO - duckdb database does not exists
+2024-10-17 01:51:42,655 - INFO - >>> Starts processing the table plano_nacional ...
+2024-10-17 01:51:42,655 - INFO - >>> Starts ingesting the table plano_nacional in the bronze layer
+2024-10-17 01:51:42,694 - INFO - >>> PDF file read successfully
+2024-10-17 01:51:55,605 - INFO - >>> File content stored in a tuple
+2024-10-17 01:51:55,627 - INFO - >>> Bronze table created
+2024-10-17 01:51:56,964 - INFO - >>> Data inserted into the bronze table (bronze.plano_nacional) successfully
+2024-10-17 01:51:56,974 - INFO - ----------------------------------------------------------------------
+2024-10-17 01:51:56,975 - INFO - >>> Starts ingesting the table plano_nacional in the silver layer
+2024-10-17 01:51:56,988 - INFO - >>> PDF file read successfully
+2024-10-17 01:55:12,164 - INFO - >>> Processed data stored in a tuple
+2024-10-17 01:55:12,188 - INFO - >>> Silver table created
+2024-10-17 01:55:12,658 - INFO - >>> Data inserted into the silver table (silver.plano_nacional) successfully
+2024-10-17 01:55:12,676 - INFO - ----------------------------------------------------------------------
+2024-10-17 01:55:12,676 - INFO - >>> Starts ingesting the table plano_nacional in the gold layer
+2024-10-17 02:02:26,940 - INFO - >>> Get the list of data after embedding function
+2024-10-17 02:02:27,022 - INFO - >>> The data that will be ingested into the gold layer were organized
+2024-10-17 02:02:27,049 - INFO - >>> Gold table created
+2024-10-17 02:02:29,028 - INFO - >>> Data inserted into the gold table (gold.plano_nacional) successfully
+2024-10-17 02:02:29,086 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:02:29,100 - INFO - >>> Starts processing the table plano_agro ...
+2024-10-17 02:02:29,102 - INFO - >>> Starts ingesting the table plano_agro in the bronze layer
+2024-10-17 02:02:29,108 - INFO - >>> PDF file read successfully
+2024-10-17 02:02:33,049 - INFO - >>> File content stored in a tuple
+2024-10-17 02:02:33,072 - INFO - >>> Bronze table created
+2024-10-17 02:02:33,235 - INFO - >>> Data inserted into the bronze table (bronze.plano_agro) successfully
+2024-10-17 02:02:33,252 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:02:33,252 - INFO - >>> Starts ingesting the table plano_agro in the silver layer
+2024-10-17 02:02:33,257 - INFO - >>> PDF file read successfully
+2024-10-17 02:03:30,665 - INFO - >>> Processed data stored in a tuple
+2024-10-17 02:03:30,688 - INFO - >>> Silver table created
+2024-10-17 02:03:30,866 - INFO - >>> Data inserted into the silver table (silver.plano_agro) successfully
+2024-10-17 02:03:30,879 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:03:30,880 - INFO - >>> Starts ingesting the table plano_agro in the gold layer
+2024-10-17 02:09:19,486 - INFO - >>> Get the list of data after embedding function
+2024-10-17 02:09:19,526 - INFO - >>> The data that will be ingested into the gold layer were organized
+2024-10-17 02:09:19,548 - INFO - >>> Gold table created
+2024-10-17 02:09:20,194 - INFO - >>> Data inserted into the gold table (gold.plano_agro) successfully
+2024-10-17 02:09:20,218 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:09:20,224 - INFO - >>> Starts processing the table plano_curitiba ...
+2024-10-17 02:09:20,225 - INFO - >>> Starts ingesting the table plano_curitiba in the bronze layer
+2024-10-17 02:09:20,240 - INFO - >>> PDF file read successfully
+2024-10-17 02:09:24,271 - INFO - >>> File content stored in a tuple
+2024-10-17 02:09:24,293 - INFO - >>> Bronze table created
+2024-10-17 02:09:24,451 - INFO - >>> Data inserted into the bronze table (bronze.plano_curitiba) successfully
+2024-10-17 02:09:24,465 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:09:24,466 - INFO - >>> Starts ingesting the table plano_curitiba in the silver layer
+2024-10-17 02:09:24,476 - INFO - >>> PDF file read successfully
+2024-10-17 02:10:24,543 - INFO - >>> Processed data stored in a tuple
+2024-10-17 02:10:24,567 - INFO - >>> Silver table created
+2024-10-17 02:10:24,724 - INFO - >>> Data inserted into the silver table (silver.plano_curitiba) successfully
+2024-10-17 02:10:24,739 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:10:24,739 - INFO - >>> Starts ingesting the table plano_curitiba in the gold layer
+2024-10-17 02:11:24,941 - INFO - >>> Get the list of data after embedding function
+2024-10-17 02:11:24,971 - INFO - >>> The data that will be ingested into the gold layer were organized
+2024-10-17 02:11:24,989 - INFO - >>> Gold table created
+2024-10-17 02:11:25,521 - INFO - >>> Data inserted into the gold table (gold.plano_curitiba) successfully
+2024-10-17 02:11:25,543 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:11:25,548 - INFO - >>> Starts processing the table plano_federal ...
+2024-10-17 02:11:25,548 - INFO - >>> Starts ingesting the table plano_federal in the bronze layer
+2024-10-17 02:11:25,585 - INFO - >>> PDF file read successfully
+2024-10-17 02:12:01,604 - INFO - >>> File content stored in a tuple
+2024-10-17 02:12:01,626 - INFO - >>> Bronze table created
+2024-10-17 02:12:02,126 - INFO - >>> Data inserted into the bronze table (bronze.plano_federal) successfully
+2024-10-17 02:12:02,149 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:12:02,150 - INFO - >>> Starts ingesting the table plano_federal in the silver layer
+2024-10-17 02:12:02,168 - INFO - >>> PDF file read successfully
+2024-10-17 02:16:09,603 - INFO - >>> Processed data stored in a tuple
+2024-10-17 02:16:09,750 - INFO - >>> Silver table created
+2024-10-17 02:16:10,243 - INFO - >>> Data inserted into the silver table (silver.plano_federal) successfully
+2024-10-17 02:16:10,268 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:16:10,269 - INFO - >>> Starts ingesting the table plano_federal in the gold layer
+2024-10-17 02:19:43,240 - INFO - >>> Get the list of data after embedding function
+2024-10-17 02:19:43,300 - INFO - >>> The data that will be ingested into the gold layer were organized
+2024-10-17 02:19:43,326 - INFO - >>> Gold table created
+2024-10-17 02:19:45,603 - INFO - >>> Data inserted into the gold table (gold.plano_federal) successfully
+2024-10-17 02:19:45,659 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:19:45,679 - INFO - >>> Starts processing the table plano_itabirito ...
+2024-10-17 02:19:45,680 - INFO - >>> Starts ingesting the table plano_itabirito in the bronze layer
+2024-10-17 02:19:45,683 - INFO - >>> PDF file read successfully
+2024-10-17 02:19:50,199 - INFO - >>> File content stored in a tuple
+2024-10-17 02:19:50,221 - INFO - >>> Bronze table created
+2024-10-17 02:19:50,330 - INFO - >>> Data inserted into the bronze table (bronze.plano_itabirito) successfully
+2024-10-17 02:19:50,348 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:19:50,349 - INFO - >>> Starts ingesting the table plano_itabirito in the silver layer
+2024-10-17 02:19:50,351 - INFO - >>> PDF file read successfully
+2024-10-17 02:20:31,909 - INFO - >>> Processed data stored in a tuple
+2024-10-17 02:20:31,936 - INFO - >>> Silver table created
+2024-10-17 02:20:32,058 - INFO - >>> Data inserted into the silver table (silver.plano_itabirito) successfully
+2024-10-17 02:20:32,075 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:20:32,077 - INFO - >>> Starts ingesting the table plano_itabirito in the gold layer
+2024-10-17 02:21:18,466 - INFO - >>> Get the list of data after embedding function
+2024-10-17 02:21:18,498 - INFO - >>> The data that will be ingested into the gold layer were organized
+2024-10-17 02:21:18,520 - INFO - >>> Gold table created
+2024-10-17 02:21:18,908 - INFO - >>> Data inserted into the gold table (gold.plano_itabirito) successfully
+2024-10-17 02:21:18,928 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:21:18,931 - INFO - >>> Starts processing the table plano_joao_pessoa ...
+2024-10-17 02:21:18,932 - INFO - >>> Starts ingesting the table plano_joao_pessoa in the bronze layer
+2024-10-17 02:21:19,065 - INFO - >>> PDF file read successfully
+2024-10-17 02:22:04,683 - INFO - >>> File content stored in a tuple
+2024-10-17 02:22:04,703 - INFO - >>> Bronze table created
+2024-10-17 02:22:04,859 - INFO - >>> Data inserted into the bronze table (bronze.plano_joao_pessoa) successfully
+2024-10-17 02:22:04,874 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:22:04,875 - INFO - >>> Starts ingesting the table plano_joao_pessoa in the silver layer
+2024-10-17 02:22:04,925 - INFO - >>> PDF file read successfully
+2024-10-17 02:23:34,029 - INFO - >>> Processed data stored in a tuple
+2024-10-17 02:23:34,052 - INFO - >>> Silver table created
+2024-10-17 02:23:34,195 - INFO - >>> Data inserted into the silver table (silver.plano_joao_pessoa) successfully
+2024-10-17 02:23:34,208 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:23:34,209 - INFO - >>> Starts ingesting the table plano_joao_pessoa in the gold layer
+2024-10-17 02:27:33,591 - INFO - >>> Get the list of data after embedding function
+2024-10-17 02:27:33,615 - INFO - >>> The data that will be ingested into the gold layer were organized
+2024-10-17 02:27:33,641 - INFO - >>> Gold table created
+2024-10-17 02:27:34,120 - INFO - >>> Data inserted into the gold table (gold.plano_joao_pessoa) successfully
+2024-10-17 02:27:34,145 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:27:34,147 - INFO - >>> Starts processing the table plano_sp ...
+2024-10-17 02:27:34,148 - INFO - >>> Starts ingesting the table plano_sp in the bronze layer
+2024-10-17 02:27:34,220 - INFO - >>> PDF file read successfully
+2024-10-17 02:27:43,082 - INFO - >>> File content stored in a tuple
+2024-10-17 02:27:43,109 - INFO - >>> Bronze table created
+2024-10-17 02:27:43,279 - INFO - >>> Data inserted into the bronze table (bronze.plano_sp) successfully
+2024-10-17 02:27:43,292 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:27:43,293 - INFO - >>> Starts ingesting the table plano_sp in the silver layer
+2024-10-17 02:27:43,301 - INFO - >>> PDF file read successfully
+2024-10-17 02:28:46,618 - INFO - >>> Processed data stored in a tuple
+2024-10-17 02:28:46,655 - INFO - >>> Silver table created
+2024-10-17 02:28:46,831 - INFO - >>> Data inserted into the silver table (silver.plano_sp) successfully
+2024-10-17 02:28:46,848 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:28:46,849 - INFO - >>> Starts ingesting the table plano_sp in the gold layer
+2024-10-17 02:29:57,959 - INFO - >>> Get the list of data after embedding function
+2024-10-17 02:29:57,996 - INFO - >>> The data that will be ingested into the gold layer were organized
+2024-10-17 02:29:58,026 - INFO - >>> Gold table created
+2024-10-17 02:29:58,683 - INFO - >>> Data inserted into the gold table (gold.plano_sp) successfully
+2024-10-17 02:29:58,712 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:29:58,736 - INFO - >>> Starts processing the table enfrentamento_nacional ...
+2024-10-17 02:29:58,738 - INFO - >>> Starts ingesting the table enfrentamento_nacional in the bronze layer
+2024-10-17 02:29:58,768 - INFO - >>> PDF file read successfully
+2024-10-17 02:29:59,843 - INFO - >>> File content stored in a tuple
+2024-10-17 02:29:59,865 - INFO - >>> Bronze table created
+2024-10-17 02:29:59,952 - INFO - >>> Data inserted into the bronze table (bronze.enfrentamento_nacional) successfully
+2024-10-17 02:29:59,967 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:29:59,968 - INFO - >>> Starts ingesting the table enfrentamento_nacional in the silver layer
+2024-10-17 02:29:59,969 - INFO - >>> PDF file read successfully
+2024-10-17 02:30:34,915 - INFO - >>> Processed data stored in a tuple
+2024-10-17 02:30:34,936 - INFO - >>> Silver table created
+2024-10-17 02:30:35,021 - INFO - >>> Data inserted into the silver table (silver.enfrentamento_nacional) successfully
+2024-10-17 02:30:35,036 - INFO - ----------------------------------------------------------------------
+2024-10-17 02:30:35,038 - INFO - >>> Starts ingesting the table enfrentamento_nacional in the gold layer
+2024-10-17 02:31:14,198 - INFO - >>> Get the list of data after embedding function
+2024-10-17 02:31:14,213 - INFO - >>> The data that will be ingested into the gold layer were organized
+2024-10-17 02:31:14,250 - INFO - >>> Gold table created
+2024-10-17 02:31:14,549 - INFO - >>> Data inserted into the gold table (gold.enfrentamento_nacional) successfully
+2024-10-17 02:31:14,572 - INFO - ----------------------------------------------------------------------

@@ -1,0 +1,6 @@
+2024-10-20 03:43:20,682 - INFO - Configured the log function. Log file in C:/Users/Micro/Downloads/BCG_X_CHALLENGE/desenv/log/20241020_034320_log.txt
+2024-10-20 03:43:20,683 - INFO - duckdb database already exists!
+2024-10-20 03:43:21,285 - INFO - Processing and cleaning data from the user query completed successfully
+2024-10-20 03:43:22,744 - INFO - Transformed the user query into a float vector
+2024-10-20 03:43:23,111 - INFO - Retrieved similar documents based on user input
+2024-10-20 03:43:29,733 - INFO - Final response generated successfully
