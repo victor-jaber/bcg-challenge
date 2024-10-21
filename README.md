@@ -14,6 +14,76 @@ The development of the AI Climate Adaptation Chat Application is currently in it
 - Integrating reliable climate data sources for accurate information.
 - Building an intuitive user interface for seamless interaction.
 
+## Prerequisites
+
+- Python 3.x installed on your system.
+
+## Installation
+
+Follow the steps below to set up the environment and run the project.
+
+### 1. Clone the Repository
+
+First, clone the repository or download the project files.
+
+```bash
+git clone https://github.com/victor-jaber/bcg-challenge.git
+cd bcg-challenge/RAG
+```
+
+### 2. Create a Virtual Environment
+
+Create a new virtual environment with the following command:
+
+```bash
+python -m venv .pyenv
+```
+
+### 3. Activate the Virtual Environment
+
+Activate the virtual environment using the command appropriate for your operating system:
+
+- **Linux or macOS**:
+  ```bash
+  source .pyenv/bin/activate
+  ```
+
+- **Windows**:
+  ```bash
+  .pyenv\Scripts\activate
+  ```
+
+### 4. Install Dependencies
+
+Install the necessary libraries using the `requirements.txt` file included in the project. 
+Ignore any errors or version conflicts.
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Run the Project
+
+After installing the dependencies, you can run the project.
+
+```bash
+cd ..
+python app.py
+```
+
+You should see something like this in your terminal:
+
+```bash
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-551-288
+```
+
 ## Future Roadmap
 - **Q1:** Implement basic AI responses and climate-related queries.
 - **Q2:** Enhance AI capabilities with localized data integration.
