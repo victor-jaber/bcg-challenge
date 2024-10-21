@@ -128,6 +128,28 @@ def process_input_with_retrieval(user_query, logger):
     openai_api_key =  config['EMBEDDING']['OPEN_API_KEY']
     model = config['EMBEDDING']['MODEL']
 
+    # For short questions the RAG is not applied.
+    if len(user_query) <= 20:
+        logger.info('User query is too short, so the RAG will not be applied')
+        # Defines the system message and generates the model return
+        system_message = f"""
+            Você é um assistente de inteligência artificial desenhado para apoiar gestores municipais em uma ampla gama de atividades, desde responder simples perguntas até prover explicações profundas e discussões sobre como construir um plano de adaptação climática para um município.
+            Você não deve em nenhuma circustância inventar coisas, e deve simplesmente dizer ao usuário que não sabe quando não souber.
+            Você deve fornecer ações práticas para realizar o planejamento climático do munícipio solicitado, por ordem de prioridade em termos de facilidade de implementação e impacto.
+            Sempre que possível, dê exemplos factuais das ações sugeridas que foram implementas em outras cidades.
+            """
+        messages = [("system", system_message, ), ("human", user_query), ]
+
+        final_response = get_completion_from_messages(messages, openai_api_key)
+        
+        # Handle empty responses
+        if not final_response.content:
+            logger.info('Could not generate a response')
+            return "Desculpe, não foi possível gerar uma resposta. Por favor, tente novamente."
+        
+        logger.info('Final response generated successfully')
+        return final_response.content
+    
     # Transforms the user query into a vector
     emb = get_embeddings(user_query, model, openai_api_key)
     logger.info('Transformed the user query into a float vector')
