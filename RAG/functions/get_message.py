@@ -90,6 +90,7 @@ def retrive_similar_docs(query_embedding, conn, limit=10):
             silver.plano_joao_pessoa t1
             LEFT JOIN gold.plano_joao_pessoa t2 ON (t1.page_number = t2.page_number)
             )
+        WHERE (embedding <=> {query_embedding}) >= 0.72
         ORDER BY (embedding <=> {query_embedding}) LIMIT {limit}
         """
     cur.execute(query)
@@ -119,7 +120,7 @@ def process_input_with_retrieval(user_query, logger):
     # Processing and cleaning data in the user query
     user_query = cleaning_user_query(user_query)
     logger.info('Processing and cleaning data from the user query completed successfully')
-    
+
     # Get the parameters for the model
     ini_config = get_dir_config()
     config = ConfigParser()
