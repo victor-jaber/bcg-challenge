@@ -1,0 +1,7 @@
+{% if historico_chat %}
+    {% for message in historico_chat %}
+        <div class="message {{ message[0] }}"> <!-- message[0] is the 'role' -->
+            <p style="white-space: pre-wrap;">{{ message[1]|safe }}</p> <!-- message[1] is the 'content' -->
+        </div>
+    {% endfor %}
+{% endif %}

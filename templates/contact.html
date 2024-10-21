@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chico AI - Contact</title>
+    <link rel="icon" type="image/png" href="../public/chico_v3.png"> <!-- Adjust the path as necessary -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            justify-content: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e9ecef; /* Background color */
+        }
+        .container {
+            width: 90%; /* Width of the content box */
+            max-width: 800px; /* Maximum width */
+            background-color: #052436; /* Background color of the box */
+            padding: 50px; /* Padding inside the box */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        h1 {
+            margin-top: 0;
+            color: white; /* Set header color to white */
+        }
+        p {
+            line-height: 1.6; /* Line height for better readability */
+            color: white; /* Set paragraph color to white */
+        }
+        .back-button {
+            margin-top: 20px; /* Spacing above the button */
+            padding: 10px 20px; /* Padding inside the button */
+            background-color: #444654; /* Background color of the button */
+            color: white; /* Text color of the button */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Change cursor on hover */
+            font-size: 16px; /* Font size */
+        }
+        .back-button:hover {
+            background-color: #052436; /* Color on hover over the button */
+        }
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .contact-info i {
+            margin-right: 10px; /* Space between the icon and text */
+            color: white; /* Color of icons in white */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contato</h1>
+        
+        <div class="contact-info">
+            <i class="fas fa-envelope"></i>
+            <p>Para entrar em contato conosco, você pode enviar um e-mail para:</p>
+        </div>
+        <p><strong>pedrohaa.silva@gmail.com</strong></p>
+        
+        <div class="contact-info">
+            <i class="fab fa-whatsapp"></i>
+            <p>WhatsApp:</p>
+        </div>
+        <p><strong>(13) 98189-7033</strong></p>
+
+        <div class="contact-info">
+            <i class="fab fa-github"></i>
+            <p>Você também pode conferir o código-fonte do projeto no nosso repositório do GitHub:</p>
+        </div>
+        <p><a href="https://github.com/victor-jaber/bcg-challenge/tree/main" target="_blank" style="color:white;">GitHub - Chico AI</a></p> <!-- Link para o GitHub -->
+
+        <!-- Button to go back to index.html -->
+        <a href="/"><button class="back-button">Voltar para Início</button></a>
+    </div>
+
+</body>
+</html>
