@@ -28,7 +28,7 @@ First, clone the repository or download the project files.
 
 ```bash
 git clone https://github.com/victor-jaber/bcg-challenge.git
-cd bcg-challenge/RAG
+cd bcg-challenge
 ```
 
 ### 2. Create a Virtual Environment
@@ -67,7 +67,6 @@ pip install -r requirements.txt
 After installing the dependencies, you can run the project.
 
 ```bash
-cd ..
 python app.py
 ```
 
