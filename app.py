@@ -1,55 +1,54 @@
 from flask import Flask, render_template, request, redirect, url_for
-from functions.get_message import process_input_with_retrieval
 from database import init_db, insert_message, get_messages, sqlite3
 import markdown
 
 app = Flask(__name__, static_url_path='/public', static_folder='public')
-app.secret_key = 'your_secret_key'  # Set a secret key for sessions
+app.secret_key = 'your_secret_key'  # Defina uma chave secreta para sessões
 
-# Initialize the database
+# Inicializa o banco de dados
 init_db()
-
 
 @app.route("/", methods=["GET", "POST"])
 def chat():
     if request.method == "POST":
         user_query = request.form["pergunta"]
 
-        # Store the user's message in the database
+        # Armazena a mensagem do usuário no banco de dados
         insert_message("user", user_query)
         print(f"User message stored: {user_query}")
 
-        # Process the input and get the response using the retrieval function
-        response = process_input_with_retrieval(user_query)
-        print(f"Response from process_input_with_retrieval: {response}")  # Log the response
+        # Retorna uma resposta fixa em vez de processar com a função ausente
+        response = "Sorry, I don't have a response for that yet."
+        print(f"Response: {response}")  # Exibe a resposta fixa no log
 
-        # Store the bot's response in the database
+        # Armazena a resposta do bot no banco de dados
         insert_message("bot", response)
         print(f"Bot message stored: {response}")
 
-        # Convert user query and bot response to Markdown
+        # Converte a pergunta e a resposta para Markdown
         user_query_md = markdown.markdown(user_query)
         response_md = markdown.markdown(response)
 
-        # Check if it's an AJAX request
+        # Verifica se a requisição é AJAX
         if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
-            # Return only the HTML of the chat history as a response
+            # Retorna apenas o histórico do chat como resposta
             return render_template("chat_history.html", historico_chat=get_messages(), user_query=user_query_md, bot_response=response_md)
         else:
-            # Render the full page if it's a normal request
+            # Renderiza a página completa se for uma requisição normal
             return render_template("index.html", historico_chat=get_messages(), user_query=user_query_md, bot_response=response_md)
 
+    # Renderiza a página inicial com o histórico do chat
     return render_template("index.html", historico_chat=get_messages())
 
 @app.route("/clear_history", methods=["POST"])
 def clear_history():
-    # Clear the chat history from the database
+    # Limpa o histórico do chat no banco de dados
     conn = sqlite3.connect('chatbot.db')
     cursor = conn.cursor()
     cursor.execute('DELETE FROM messages')
     conn.commit()
     conn.close()
-    return redirect(url_for('chat'))  # Redirect to the main page
+    return redirect(url_for('chat'))  # Redireciona para a página principal
 
 @app.route("/home")
 def home():
