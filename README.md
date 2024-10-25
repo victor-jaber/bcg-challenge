@@ -83,6 +83,10 @@ Press CTRL+C to quit
  * Debugger PIN: 115-551-288
 ```
 
+## Notes
+
+If the API key expires, then change it on line 86 of the file `RAG/config/config.ini`
+
 ## Future Roadmap
 - **Q1:** Implement basic AI responses and climate-related queries.
 - **Q2:** Enhance AI capabilities with localized data integration.
