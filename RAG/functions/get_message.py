@@ -2,12 +2,13 @@ from configparser import ConfigParser
 from langchain_openai import ChatOpenAI
 from langchain_openai import OpenAIEmbeddings
 
-from functions.data_cleaning import cleaning_user_query
-from functions.utils import database_connection, get_dir_config
-from functions.embedding import embedding_func
+from RAG.functions.data_cleaning import cleaning_user_query
+from RAG.functions.utils import database_connection, get_dir_config
+from RAG.functions.embedding import embedding_func
 
 import time
-from database import get_messages_dict
+from RAG.functions.database import get_messages_dict
+
 
 def get_embeddings(text, model, openai_api_key):
     '''
@@ -92,108 +93,13 @@ def retrive_similar_docs(query_embedding, conn, limit=10):
             silver.plano_joao_pessoa t1
             LEFT JOIN gold.plano_joao_pessoa t2 ON (t1.page_number = t2.page_number)
             )
+        WHERE (embedding <=> {query_embedding}) >= 0.72
         ORDER BY (embedding <=> {query_embedding}) LIMIT {limit}
         """
     cur.execute(query)
     top_docs = cur.fetchall()
     return top_docs
 
-
-from configparser import ConfigParser
-from langchain_openai import ChatOpenAI
-from langchain_openai import OpenAIEmbeddings
-
-from functions.data_cleaning import cleaning_user_query
-from functions.utils import database_connection, get_dir_config
-from functions.embedding import embedding_func
-
-
-def get_embeddings(text, model, openai_api_key):
-    '''
-    Function to transform a string into a vector of numbers
-    '''
-    embedding = OpenAIEmbeddings(model=model,
-                                  openai_api_key=openai_api_key)
-    emb = embedding_func(embedding, text)
-    return emb
-
-
-def retrive_similar_docs(query_embedding, conn, limit=10):
-    '''
-    Retrieve similar documents based on user input.
-    The search is done using cosine similarity
-    '''
-    cur = conn.cursor()
-    query = f"""
-        SELECT content, embedding <=> {query_embedding} as cos_sim FROM 
-            (
-            SELECT 
-                content, embedding
-            FROM
-            silver.enfrentamento_nacional t1
-            LEFT JOIN gold.enfrentamento_nacional t2 ON (t1.page_number = t2.page_number)
-
-            UNION 
-
-            SELECT 
-                content, embedding
-            FROM
-            silver.plano_curitiba t1
-            LEFT JOIN gold.plano_curitiba t2 ON (t1.page_number = t2.page_number)
-
-            UNION 
-
-            SELECT 
-                content, embedding
-            FROM
-            silver.plano_agro t1
-            LEFT JOIN gold.plano_agro t2 ON (t1.page_number = t2.page_number)
-
-            UNION 
-
-            SELECT 
-                content, embedding
-            FROM
-            silver.plano_nacional t1
-            LEFT JOIN gold.plano_nacional t2 ON (t1.page_number = t2.page_number)
-
-            UNION 
-
-            SELECT 
-                content, embedding
-            FROM
-            silver.plano_sp t1
-            LEFT JOIN gold.plano_sp t2 ON (t1.page_number = t2.page_number)
-
-            UNION 
-
-            SELECT 
-                content, embedding
-            FROM
-            silver.plano_federal t1
-            LEFT JOIN gold.plano_federal t2 ON (t1.page_number = t2.page_number)
-
-            UNION 
-
-            SELECT 
-                content, embedding
-            FROM
-            silver.plano_itabirito t1
-            LEFT JOIN gold.plano_itabirito t2 ON (t1.page_number = t2.page_number)
-
-            UNION 
-
-            SELECT 
-                content, embedding
-            FROM
-            silver.plano_joao_pessoa t1
-            LEFT JOIN gold.plano_joao_pessoa t2 ON (t1.page_number = t2.page_number)
-        )
-        ORDER BY (embedding <=> {query_embedding}) LIMIT {limit}
-    """
-    cur.execute(query)
-    top_docs = cur.fetchall()
-    return top_docs
 
 def format_response(response):
     """
@@ -225,7 +131,8 @@ def process_input_with_retrieval(user_query, logger):
     '''
     Returns the model response to the user query.
     '''
-    start_time = time.time()  # Início do monitoramento do tempo total
+    # Start of total time monitoring
+    start_time = time.time()
 
     # Connects to the database
     conn = database_connection("datalake.db")
@@ -249,35 +156,56 @@ def process_input_with_retrieval(user_query, logger):
     max_history_length = 3  # Adjust as necessary for your use case.
     
     messages_to_pass = chat_history[-max_history_length:]  # Get the last N messages
-
-    # Prepare the messages for LLM context.
-    messages = [("system", "Você é um assistente de inteligência artificial desenhado para apoiar gestores municipais em uma ampla gama de atividades.")]
     
     # Append previous messages to maintain context.
+    messages = []
     for msg in messages_to_pass:
         messages.append((msg['role'], msg['content']))
 
     # Add current user query to the messages.
     messages.append(("human", user_query))
 
-    # Transforms the user query into a vector.
-    emb = get_embeddings(user_query, model, openai_api_key)
-    
-    logger.info('Transformed the user query into a float vector')
+    # For short questions the RAG is not applied.
+    if len(user_query) <= 20:
+        logger.info('User query is too short, so the RAG will not be applied')
+        # Defines the system message and generates the model return
+        system_message = f"""
+            Você é um assistente de inteligência artificial desenhado para apoiar gestores municipais em uma ampla gama de atividades, desde responder simples perguntas até prover explicações profundas e discussões sobre como construir um plano de adaptação climática para um município.
+            Você não deve em nenhuma circustância inventar coisas, e deve simplesmente dizer ao usuário que não sabe quando não souber.
+            Você deve fornecer ações práticas para realizar o planejamento climático do munícipio solicitado, por ordem de prioridade em termos de facilidade de implementação e impacto.
+            Sempre que possível, dê exemplos factuais das ações sugeridas que foram implementas em outras cidades.
+            """
 
-    # Retrieve similar documents based on user input.
-    related_docs = retrive_similar_docs(emb, conn, limit=3)
-    
-    logger.info('Retrieved similar documents based on user input')
+    else:
+        # Transforms the user query into a vector.
+        emb = get_embeddings(user_query, model, openai_api_key)
+        logger.info('Transformed the user query into a float vector')
 
-    # Ensure there are at least one document.
-    if len(related_docs) == 0:
-        logger.info('No documents relevant to the question were found')
-        return "Desculpe, não foram encontrados documentos relevantes para a sua pergunta"
+        # Retrieve similar documents based on user input.
+        related_docs = retrive_similar_docs(emb, conn, limit=3)
+        logger.info('Retrieved similar documents based on user input')
 
-    # Append related documents to context if necessary (optional).
-    for i in range(len(related_docs)):
-        messages.append(("system", f"Documento {i + 1}: {related_docs[i][0]}"))
+        # Ensure there are at least one document.
+        if len(related_docs) == 0:
+            logger.info('No documents relevant to the question were found')
+            return "Desculpe, não foram encontrados documentos relevantes para a sua pergunta"
+        
+        # Prepare the messages for LLM context.
+        system_message = """
+            Você é um assistente de inteligência artificial desenhado para apoiar gestores municipais em uma ampla gama de atividades, desde responder simples perguntas até prover explicações profundas e discussões sobre como construir um plano de adaptação climática para um município.
+            Você não deve em nenhuma circustância inventar coisas, e deve simplesmente dizer ao usuário que não sabe quando não souber.
+            
+            Você deve fornecer ações práticas para realizar o planejamento climático do munícipio solicitado, por ordem de prioridade em termos de facilidade de implementação e impacto.
+            Justifique suas ações com base nos documentos apresentados abaixo do munícipio e outros documentos da sua base de dados.
+            Sempre que possível, dê exemplos factuais das ações sugeridas que foram implementas em outras cidades.
+            """
+
+        # Append related documents to context if necessary (optional).
+        for i in range(len(related_docs)):
+            system_message += f"Documento {i + 1}: {related_docs[i][0]}"
+
+    messages.append(("system", system_message))
+    print(messages)
 
     max_retries = 5  
     final_response = None

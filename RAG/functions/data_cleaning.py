@@ -49,6 +49,7 @@ def lemmatize_text(text):
     Function for text lemmatization
     '''
     # Upload the model to Portuguese
+    spacy.cli.download('pt_core_news_sm')
     nlp = spacy.load('pt_core_news_sm')
     
     # Returns the lemma
