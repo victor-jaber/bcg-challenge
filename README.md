@@ -15,7 +15,7 @@ Este guia fornece as instruções para configurar e executar o projeto localment
 Clone o repositório do GitHub usando o comando abaixo:
 
 ```bash
-git clone https://github.com/victor-jaber/bcg-x-challenge.git
+git clone https://github.com/victor-jaber/bcg-challenge.git
 ```
 
 ### 2. Navegar até o Repositório
@@ -23,7 +23,7 @@ git clone https://github.com/victor-jaber/bcg-x-challenge.git
 Entre na pasta do repositório clonado:
 
 ```bash
-cd bcg-x-challenge
+cd bcg-challenge
 ```
 
 ### 3. Configurar o Backend
