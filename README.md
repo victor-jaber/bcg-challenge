@@ -1,100 +1,90 @@
-# AI Climate Adaptation Chat Application
 
-## Overview
-This project aims to build an **AI-powered chat application** designed to assist users in understanding and adapting to climate change. Whether you are looking for practical solutions for environmental sustainability, weather impact insights, or advice on local adaptations, this chat application will provide reliable and tailored responses.
+# BCG-X Challenge
 
-## Features (In Progress)
-- **AI-Assisted Conversations:** Real-time responses powered by artificial intelligence to answer questions and provide guidance on climate adaptation and sustainable practices.
-- **Localized Climate Insights:** Personalized advice based on user location, with recommendations on how to mitigate and adapt to local climate conditions.
-- **Educational Support:** Resourceful information to help users stay informed about climate change, green initiatives, and adaptation strategies.
+Este guia fornece as instruções para configurar e executar o projeto localmente utilizando Docker.
 
-## Project Status
-The development of the AI Climate Adaptation Chat Application is currently in its **early stages**. The team is actively working on:
-- Setting up the core AI chat functionality.
-- Integrating reliable climate data sources for accurate information.
-- Building an intuitive user interface for seamless interaction.
+## Pré-requisitos
 
-## Prerequisites
+- Docker instalado em sua máquina
+- Chave de API da OpenAI
 
-- Python 3.x installed on your system.
+## Configuração do Projeto
 
-## Installation
+### 1. Clonar o Repositório
 
-Follow the steps below to set up the environment and run the project.
-
-### 1. Clone the Repository
-
-First, clone the repository or download the project files.
+Clone o repositório do GitHub usando o comando abaixo:
 
 ```bash
-git clone https://github.com/victor-jaber/bcg-challenge.git
-cd bcg-challenge
+git clone https://github.com/victor-jaber/bcg-x-challenge.git
 ```
 
-### 2. Create a Virtual Environment
+### 2. Navegar até o Repositório
 
-Create a new virtual environment with the following command:
+Entre na pasta do repositório clonado:
 
 ```bash
-python -m venv .pyenv
+cd bcg-x-challenge
 ```
 
-### 3. Activate the Virtual Environment
+### 3. Configurar o Backend
 
-Activate the virtual environment using the command appropriate for your operating system:
+- Dentro do repositório, há duas pastas principais: `back-bcg` e `front-bcg`.
+- Navegue até a pasta `back-bcg`:
 
-- **Linux or macOS**:
   ```bash
-  source .pyenv/bin/activate
+  cd back-bcg
   ```
 
-- **Windows**:
+- Em seguida, vá para a pasta `config`:
+
   ```bash
-  .pyenv\Scripts\activate
+  cd config
   ```
 
-### 4. Install Dependencies
+- Renomeie o arquivo `config.ini.example` para `config.ini`:
 
-Install the necessary libraries using the `requirements.txt` file included in the project. 
-Ignore any errors or version conflicts.
+  ```bash
+  mv config.ini.example config.ini
+  ```
+
+- Abra o arquivo `config.ini` em um editor de texto e localize a linha 86. Substitua o valor da chave OpenAI pela sua chave de API:
+
+  ```ini
+  api_key=YOUR_OPENAI_API_KEY
+  ```
+
+  > **Nota:** Substitua `YOUR_OPENAI_API_KEY` pela sua chave de API da OpenAI.
+
+- Salve e feche o arquivo.
+
+### 4. Voltar à Pasta Raiz
+
+Após configurar o arquivo `config.ini`, retorne à pasta raiz do projeto onde estão as pastas `front-bcg` e `back-bcg`:
 
 ```bash
-pip install -r requirements.txt
+cd ../..
 ```
 
-### 5. Run the Project
+### 5. Iniciar o Docker
 
-After installing the dependencies, you can run the project.
+Execute o seguinte comando para iniciar o projeto com Docker:
 
-```bash
-python app.py
-```
+- Para visualizar logs diretamente no terminal:
 
-You should see something like this in your terminal:
+  ```bash
+  docker-compose up
+  ```
 
-```bash
- * Serving Flask app 'app'
- * Debug mode: on
-WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
- * Running on http://127.0.0.1:5000
-Press CTRL+C to quit
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 115-551-288
-```
+- Para rodar em modo "detached" (em segundo plano):
 
-## Notes
+  ```bash
+  docker-compose up -d
+  ```
 
-If the API key expires, then change it on line 86 of the file `RAG/config/config.ini`
+### 6. Acessar a Aplicação
 
-## Future Roadmap
-- **Q1:** Implement basic AI responses and climate-related queries.
-- **Q2:** Enhance AI capabilities with localized data integration.
-- **Q3:** Launch beta testing and gather user feedback for improvements.
-- **Q4:** Release the first public version of the application.
+Após o Docker iniciar, acesse a aplicação no navegador em [localhost:3000](http://localhost:3000).
 
-## Contributing
-While the application is still under development, we welcome suggestions, feedback, and contributions! If you have ideas or would like to participate, please stay tuned for more updates on how you can get involved.
+---
 
-## License
-This project is currently under a [MIT] license. Please see the `LICENSE` file for more information.
+Pronto! Agora a aplicação está configurada e rodando localmente.
