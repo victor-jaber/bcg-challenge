@@ -8,7 +8,7 @@ from functions.bronze_ingestion import bronze_data_ingestion
 from functions.silver_ingestion import silver_data_ingestion
 from functions.gold_ingestion import gold_data_ingestion
 from functions.get_message import process_input_with_retrieval
-from database import init_db, register_user, verify_user
+from database import init_db, register_user, verify_user, insert_message
 
 # Initialize the database
 init_db()
@@ -42,11 +42,20 @@ def query():
     data = request.json
     user_query = data.get('query', '')
 
+    # Store the user's message in the database
+    insert_message("user", user_query)
+    logger.info(f"User message stored: {user_query}")
+
     # Process the input query using the retrieval function
     final_response = process_input_with_retrieval(user_query, logger)
 
     # Clean and return the response as JSON
     clean_response = clean_html(final_response)
+
+    # Store the bot's response in the database
+    insert_message("assistant", clean_response)
+    logger.info(f"Bot message stored")
+
     return jsonify({"response": clean_response})
 
 # User registration endpoint
