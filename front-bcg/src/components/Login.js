@@ -17,11 +17,12 @@ function Login() {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:5000/login', { email, password });
-      setMessage(response.data.message);
+      
+      // Armazena o token de autenticação no localStorage
+      localStorage.setItem('authToken', response.data.token);
 
-      // Armazena o indicador de autenticação
-      localStorage.setItem('isAuthenticated', 'true');
-      navigate('/'); // Redireciona para a página inicial
+      setMessage(response.data.message);
+      navigate('/'); // Redireciona para a página inicial após o login bem-sucedido
     } catch (error) {
       setMessage(error.response?.data?.error || 'Erro ao fazer login');
     }
@@ -30,7 +31,7 @@ function Login() {
   return (
     <div className="login-container">
       <div className="login-form">
-        <Logo /> {/* Logotipo adicionada aqui */}
+        <Logo /> {/* Logotipo adicionado aqui */}
         <h2>Login</h2>
         <form onSubmit={handleLogin}>
           <div className="input-container">

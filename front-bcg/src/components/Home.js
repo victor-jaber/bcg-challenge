@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import './Home.css';
 import Logo from './Logo';
 
-
 function Home() {
   const navigate = useNavigate();
   const [input, setInput] = useState('');
@@ -12,6 +11,7 @@ function Home() {
     { id: 1, title: "Chat 1", lastModified: new Date().toLocaleString() },
     { id: 2, title: "Chat 2", lastModified: new Date().toLocaleString() }
   ]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleLogout = () => {
     localStorage.removeItem('isAuthenticated');
@@ -24,6 +24,7 @@ function Home() {
     const userMessage = { sender: 'user', text: input };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
     setInput('');
+    setIsLoading(true);
 
     try {
       const response = await fetch('http://localhost:5000/query', {
@@ -39,6 +40,7 @@ function Home() {
       console.error("Erro ao se comunicar com o servidor:", error);
       setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: 'Erro ao se comunicar com o servidor.' }]);
     }
+    setIsLoading(false);
   };
 
   const handleNewChat = () => {
@@ -80,6 +82,13 @@ function Home() {
               {msg.text}
             </div>
           ))}
+          {isLoading && (
+            <div className="message bot loading">
+              <span className="loading-dot">.</span>
+              <span className="loading-dot">.</span>
+              <span className="loading-dot">.</span>
+            </div>
+          )}
         </div>
         <div className="input-container">
           <input

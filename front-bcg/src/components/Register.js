@@ -10,12 +10,38 @@ function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    // Lógica para registro do usuário aqui
-    navigate('/'); // Redireciona para a página inicial após o registro
+
+    try {
+      const response = await fetch('http://localhost:5000/register', { // Altere a URL se necessário
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: username,
+          email: email,
+          password: password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Redireciona para a página inicial após o registro bem-sucedido
+        navigate('/');
+      } else {
+        // Exibe mensagem de erro
+        setError(data.error || 'Erro no registro');
+      }
+    } catch (err) {
+      console.error('Erro:', err);
+      setError('Erro ao se conectar ao servidor');
+    }
   };
 
   return (
@@ -56,6 +82,7 @@ function Register() {
               {showPassword ? <FaEyeSlash /> : <FaEye />}
             </div>
           </div>
+          {error && <p className="error-message">{error}</p>}
           <button className="form-button register-button">Registrar</button>
         </form>
         <p>Já tem uma conta? <Link to="/login" className="form-link">Faça login aqui</Link></p>
